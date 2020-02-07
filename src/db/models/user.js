@@ -9,4 +9,8 @@ module.exports = (sequelize, DataTypes) => sequelize.define(MODEL_NAMES.USER, {
     type: DataTypes.STRING,
     comment: '성',
   },
+  email: {
+    type: DataTypes.STRING,
+    comment: '이메일',
+  },
 });
