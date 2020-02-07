@@ -1,7 +1,7 @@
-const { MODEL_NAMES } = require('../../constants');
+const { TABLE_NAMES } = require('../../constants');
 
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable(MODEL_NAMES.USER, {
+  up: (queryInterface, Sequelize) => queryInterface.createTable(TABLE_NAMES.USER, {
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -26,5 +26,5 @@ module.exports = {
       type: Sequelize.DATE,
     },
   }),
-  down: (queryInterface) => queryInterface.dropTable(MODEL_NAMES.USER),
+  down: (queryInterface) => queryInterface.dropTable(TABLE_NAMES.USER),
 };
