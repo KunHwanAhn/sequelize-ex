@@ -38,7 +38,9 @@ $ docker-compose up -d
 
 ### Using docker
 ```bash
+# PostgreSQL 데이터 저장 볼륨 생성
 $ docker volume create dbdata
+# PostgreSQL 실행
 $ docker container run -itd --name pg_db -e POSTGRES_DB=YOUR_DB_NAME -e POSTGRES_USER=YOUR_DB_USER -e POSTGRES_PASSWORD=YOUR_DB_PASS -p 5432:5432 --restart always -v dbdata:/var/lib/postgresql/data postgres:11.6
 ```
 
@@ -48,9 +50,16 @@ $ docker container run -itd --name pg_db -e POSTGRES_DB=YOUR_DB_NAME -e POSTGRES
 ## Sequelize Migration & Seed
 ```bash
 # 테이블 생성
-$ yarn sequelize db:migrate
+$ yarn db:migrate
+
+# or use npm
+$ npm run db:migrate
+
 # Seed 데이터 생성
-$ yarn sequelize db:seed:all
+$ yarn db:seed:all
+
+# or use npm
+$ npm run db:seed:all
 ```
 
 ## 프로그램 실행
