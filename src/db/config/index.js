@@ -6,6 +6,7 @@ module.exports = {
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
     dialect: 'postgres',
     pool: {
       max: 5,
@@ -24,6 +25,7 @@ module.exports = {
     password: process.env.DB_PASS,
     database: `${process.env.DB_NAME}_test`,
     host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
     dialect: 'postgres',
     pool: {
       max: 5,
@@ -42,6 +44,7 @@ module.exports = {
     password: process.env.DB_PASS,
     database: `${process.env.DB_NAME}_production`,
     host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
     dialect: 'postgres',
     pool: {
       max: 5,
