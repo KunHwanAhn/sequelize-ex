@@ -7,11 +7,13 @@ const { MODEL_NAMES } = require('./constants');
   const users = await userModel.findAll();
   users.forEach((user) => {
     const {
-      id, firstName, lastName, createdAt,
+      id, firstName, lastName, createdAt, updatedAt, deletedAt,
     } = user;
     console.log(id);
     console.log(firstName);
     console.log(lastName);
     console.log(createdAt);
+    console.log(updatedAt);
+    console.log(deletedAt);
   });
 })();

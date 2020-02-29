@@ -17,8 +17,8 @@ module.exports = {
     define: {
       charset: 'utf8',
       timestamps: true,
+      paranoid: true,
     },
-    operatorsAliases: false,
   },
   test: {
     username: process.env.DB_USER,
@@ -36,8 +36,8 @@ module.exports = {
     define: {
       charset: 'utf8',
       timestamps: true,
+      paranoid: true,
     },
-    operatorsAliases: false,
   },
   production: {
     username: process.env.DB_USER,
@@ -55,7 +55,7 @@ module.exports = {
     define: {
       charset: 'utf8',
       timestamps: true,
+      paranoid: true,
     },
-    operatorsAliases: false,
   },
 };
