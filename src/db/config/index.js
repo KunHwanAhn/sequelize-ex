@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const logger = require('../../logger');
+
 const commonConfig = {
   dialect: 'postgres',
   pool: {
@@ -13,10 +15,9 @@ const commonConfig = {
     timestamps: true,
     paranoid: true,
   },
-  logging: (sql) => {
-    /* eslint-disable */
-    console.log(sql);
-    /* eslint-enable */
+  benchmark: true,
+  logging: (sql, executeTime) => {
+    logger.info(sql, `(${executeTime}ms)`);
   },
 };
 

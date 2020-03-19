@@ -1,5 +1,6 @@
 const { sequelize } = require('./db/models');
 const { MODEL_NAMES } = require('./constants');
+const logger = require('./logger');
 
 (async () => {
   const userModel = sequelize.model(MODEL_NAMES.USER);
@@ -10,12 +11,10 @@ const { MODEL_NAMES } = require('./constants');
       id, firstName, lastName, createdAt, updatedAt,
     } = user;
 
-    /* eslint-disable */
-    console.log(id);
-    console.log(firstName);
-    console.log(lastName);
-    console.log(createdAt);
-    console.log(updatedAt);
-    /* eslint-enable */
+    logger.info(`id >> ${id}`);
+    logger.info(`firstName >> ${firstName}`);
+    logger.info(`lastName >> ${lastName}`);
+    logger.info(`createdAt >> ${createdAt}`);
+    logger.info(`updatedAt >> ${updatedAt}`);
   });
 })();
