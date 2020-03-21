@@ -10,6 +10,7 @@ module.exports = {
       createdAt: now,
       updatedAt: now,
       email: 'jdoe@example.com',
+      status: 'CREATED',
     }], {});
   },
 

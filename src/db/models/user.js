@@ -13,4 +13,9 @@ module.exports = (sequelize, DataTypes) => sequelize.define(MODEL_NAMES.USER, {
     type: DataTypes.STRING,
     comment: '이메일',
   },
+  status: {
+    allowNull: false,
+    type: DataTypes.ENUM('CREATED', 'APPROVED', 'PAUSED'),
+    defaultValue: 'CREATED',
+  },
 });
